@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Computer Science Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Computer Science · Beginner Level</p>
+      <h1>Computer Science Quiz</h1>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Welcome screen -->
+    <section id="welcomeScreen" class="card">
+      <h2>Welcome, future developer! 👋</h2>
+      <p>Test yourself on computer fundamentals, JavaScript and web development. There are <strong id="totalInfo">12</strong> multiple-choice questions, one at a time. No login or personal details needed.</p>
+      <button type="button" id="startBtn" class="btn primary">Start Quiz</button>
+
+      <div class="board">
+        <h3>Illustrative class scoreboard</h3>
+        <p class="hint">Fictional names and made-up scores, shown for demonstration only. They are not real results.</p>
+        <ol id="sampleBoard"></ol>
+      </div>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="quizScreen" class="card" hidden>
+      <div class="topline">
+        <span id="questionCounter">Question 1 of 12</span>
+        <span id="progressText">0%</span>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <span id="progressFill"></span>
+      </div>
+      <h2 id="questionText" class="question"></h2>
+      <div id="options" class="options" role="radiogroup" aria-labelledby="questionText"></div>
+      <p id="hint" class="warn" role="alert"></p>
+      <div class="nav">
+        <button type="button" id="backBtn" class="btn ghost">Back</button>
+        <button type="button" id="nextBtn" class="btn primary">Next</button>
+      </div>
+    </section>
+
+    <!-- Results screen -->
+    <section id="resultScreen" class="card" hidden>
+      <h2>Your results</h2>
+      <div id="scoreCircle" class="score-circle"><span id="scoreValue">0/12</span></div>
+      <p id="percentText" class="percent"></p>
+      <p id="performanceMsg" class="perf"></p>
+      <button type="button" id="restartBtn" class="btn primary">Restart Quiz</button>
+      <h3 class="review-h">Answer review <span class="hint">(locked)</span></h3>
+      <ol id="review" class="review"></ol>
+    </section>
+  </main>
+
+  <footer class="wrap foot">Beginner Computer Science quiz · runs entirely in your browser</footer>
+  <script src="script.js"></script>
+</body>
+</html>
